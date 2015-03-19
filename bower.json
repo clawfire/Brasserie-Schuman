@@ -26,6 +26,7 @@
     "normalize-scss": "~3.0.1",
     "adaptive-placeholders": "*",
     "hmps-animate-scss": "~1.0.1",
-    "vertical-rhythms-without-compass": "~1.0.1"
+    "vertical-rhythms-without-compass": "~1.0.1",
+    "susy": "~2.2.2"
   }
 }
