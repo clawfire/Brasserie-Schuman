@@ -39,14 +39,10 @@
 // ==========
 
 $colors: (
-  shamrock: #2FD1AF,
-  jungle-green: #28B598,
-  havelock-blue: #4FA4DD,
-  curious-blue: #348FCC,
-  jaffa: #E78B43,
-  tango: #EA5E1D,
-  burnt-sienna: #E86257,
-  persian-red: #CF4339,
-  porcelain: #FBFCFC,
-  iron: #CBD0D3
-  );
+  teak : #ae9a63,
+  dune : #3A3837,
+  emperor : #555555
+ );
+ 
+$emporor-alpha : transparentize(color(emperor),0.87);
+$white-alpha : transparentize(white,0.58);
