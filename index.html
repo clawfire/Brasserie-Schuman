@@ -1,23 +1,39 @@
 ---
 layout: default
 ---
+<figure class="site-hero"><img src="" alt=""></figure>
 
-<div class="home">
+<section class="menu"></section>
 
-  <h1 class="page-heading">Posts</h1>
+<section class="site-newsletter">
+    <form action="" class="newsletter-form">
+        <label for="newsletter-email"></label>
+        <input type="email" name="newsletter-email">
+        <button type="submit">S'abonner</button>
+    </form>
+</section>
 
-  <ul class="post-list">
+<section class="site-gallery"></section>
+
+<section class="site-news">
+    <ul>
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <article>
+            <figure><img src="" alt=""></figure>
+            <header>
+                <date>{{ post.date | date: "%b %-d, %Y" }}</date>
+                <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+            </header>
+            <p>{{ post.excerpt }}</p>
+        </article>
       </li>
     {% endfor %}
-  </ul>
+    </ul>
+</section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<section class="site-facebook">
+    <a href="{{site.facebook}}">Suivez nous sur facebook</a>
+</section>
 
-</div>
+<seection class="site-map"><img src="" alt=""></seection>
