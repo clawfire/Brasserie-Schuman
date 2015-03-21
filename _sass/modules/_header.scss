@@ -1,0 +1,25 @@
+.site-header{
+    background: color(dune);
+    color: $white-alpha;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+}
+.site-title{
+    width: 100%;
+    img{
+        width : span(2 of 12);
+    }
+}
+.site-nav{
+    ul li{
+        @extend %lsn;
+        display: inline-block;
+        padding: 10px 10px 0 10px;
+    }
+    a{
+        color: $white-alpha;
+        text-decoration: none;
+    }
+}
+
