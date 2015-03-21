@@ -3,6 +3,7 @@
     color: $white-alpha;
     text-transform: uppercase;
     text-align: center;
+    padding: 20px 0;
 }
 .site-title{
     width: 100%;
@@ -14,6 +15,7 @@
     ul li{
         @extend %lsn;
         display: inline-block;
+        padding: 10px 10px 0 10px;
     }
     a{
         color: $white-alpha;
