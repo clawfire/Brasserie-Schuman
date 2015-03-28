@@ -1,0 +1,37 @@
+.site-facebook{
+    background : {
+        color: color(black);
+        image : url('../images/facebook-bg.png');
+        position : right 80%;
+        repeat : no-repeat;
+        size: 50%;
+    }
+    padding: gutter();
+    a{
+        @include type-scale(h3);
+        color: white;
+        font-family: $body-font;
+        margin-left: span(1 of 4);
+        position: relative;
+        text-decoration: none;
+        width: span(2 of 4);
+        span{
+            color: color(teak);
+            position: absolute;
+            top: 28px;
+            right: 0;
+            text-transform: capitalize;
+        }
+        &:after,
+        &::after{
+            background: url('../images/facebook-icon.png');
+            background-size: contain;
+            content: " ";
+            height: 78px;
+            position: absolute;
+            right: -100px;
+            top: -10px;
+            width: 78px;
+        }
+    }
+}
