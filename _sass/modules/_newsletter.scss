@@ -1,0 +1,41 @@
+.site-newsletter{
+    background : {
+        color: color(black);
+        image : url('../images/newsletter-bg.png');
+        repeat : no-repeat;
+        position : right 30%;
+        size: 25%;
+    }
+    padding: gutter();
+}
+.newsletter-form{
+    color: white;
+    font-family: $body-font;
+    @include type-scale(h3);
+    width: span(2 of 4);
+    margin-left: span(1 of 4);
+    a{
+        text-decoration: none;
+        color: color(teak);
+        display: block;
+        margin-bottom: 10px;
+    }
+    button,
+    input{
+        font-family: $form-input-font;
+        text-transform: uppercase;
+        @include type-scale(base);
+        padding: 7px 10px;
+        font-size: 0.651rem; /* Approximation causée par une substitution de police */
+        font-weight: 300;
+        line-height: 2.497; /* Approximation causée par une substitution de police */
+    }
+    button{
+        background-color: color(teak);
+        color: white;
+    }
+    input{
+        color: color(emperor);
+        width: 250px;
+    }
+}
