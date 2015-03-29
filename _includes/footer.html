@@ -3,3 +3,30 @@
 </address>
 <p>{{site.ouverture}}</p>
 <p><a href="mailto://{{site.email}}">{{site.email}}</a></p>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+<script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoidGhpYmF1bHRtaWxhbiIsImEiOiJPTk5Sc1A0In0.cns6bkFRjcQfIfigb0uztg';
+    var map = L.mapbox.map('map', 'examples.map-20v6611k')
+                      .setView([49.617642, 6.126142], 16);
+
+    L.mapbox.featureLayer({
+        // this feature is in the GeoJSON format: see geojson.org
+        // for the full specification
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            // coordinates here are in longitude, latitude order because
+            // x, y is the standard for GeoJSON and many formats
+            coordinates: [6.126142,49.617642]
+        },
+        properties: {
+            title: 'Brasserie Schuman',
+            description: '1 rond-point Schuman 2525 Luxembourg',
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+            'marker-size': 'large',
+            'marker-color': '#BE9A6B',
+            'marker-symbol': 'restaurant'
+         }
+    }).addTo(map);
+</script>
