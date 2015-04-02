@@ -7,27 +7,18 @@ layout: default
     <aside class="menu-navigation">
         <nav>
             <ul>
-               <li><a href="#week-menu">Menu de la semaine</a></li>
+               <li class="active"><a href="#week-menu">Menu de la semaine</a></li>
                <li><a href="#starter-menu">Entrées</a></li>
                <li><a href="#main-menu">Plats</a></li>
                <li><a href="#dessert-menu">Desserts</a></li>
             </ul>
         </nav>
-        <figure>
-            <img src="images/chef.png" alt="">
-            <figcaption>
-                <dl>
-                    <dt>Le chef</dt>
-                    <dd>Morris Clip</dd>
-                </dl>
-            </figcaption>
-        </figure>
     </aside>
-    <div class="menu-acte" id="week-menu">
+    <div class="menu-acte active" id="week-menu">
         {% for plat in site.menu reversed %}
             {% if plat.categories contains "week" %}
             <h1>{{plat.title}}</h1>
-            {{plat.output}}
+            {{plat.content | markdownify}}
             {% break %}
             {% endif %}
         {% endfor %}
