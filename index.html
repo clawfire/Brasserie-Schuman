@@ -7,9 +7,10 @@ layout: default
     <aside class="menu-navigation">
         <nav>
             <ul>
-                {% for categ in site.tags %}
-                <li>{{ categ | first }}</li>
-                {% endfor %}
+               <li><a href="#week-menu">Menu de la semaine</a></li>
+               <li><a href="#starter-menu">Entrées</a></li>
+               <li><a href="#main-menu">Plats</a></li>
+               <li><a href="#dessert-menu">Desserts</a></li>
             </ul>
         </nav>
         <figure>
@@ -22,7 +23,7 @@ layout: default
             </figcaption>
         </figure>
     </aside>
-    <div class="menu-acte">
+    <div class="menu-acte" id="week-menu">
         {% for plat in site.menu reversed %}
             {% if plat.categories contains "week" %}
             <h1>{{plat.title}}</h1>
@@ -31,7 +32,7 @@ layout: default
             {% endif %}
         {% endfor %}
     </div>
-    <div class="menu-acte">
+    <div class="menu-acte" id="starter-menu">
         <h1>Les entrées</h1>
         <dl>
             {% for plat in site.menu %}
@@ -42,7 +43,7 @@ layout: default
             {% endfor %}
         </dl>
     </div>
-    <div class="menu-acte">
+    <div class="menu-acte" id="main-menu">
         <h1>Les plats</h1>
         <dl>
             {% for plat in site.menu %}
@@ -53,7 +54,7 @@ layout: default
             {% endfor %}
         </dl>
     </div>
-    <div class="menu-acte">
+    <div class="menu-acte" id="dessert-menu">
         <h1>Les desserts</h1>
         <dl>
             {% for plat in site.menu %}
