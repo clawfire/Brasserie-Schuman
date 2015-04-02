@@ -1,11 +1,14 @@
 .menu{
     @include break;
+    margin-top: -10px;
 }
 .menu-navigation{
     font-family: $body-font;
     color: white;
     @include span(1 of 3);
+    @include first();
     nav{
+        @include break;
         background: {
             color : color(black);
             image : url("../images/chef.png");
@@ -35,11 +38,37 @@
             }
         }
     }
+    .navigation-cartouche{
+        @include break;
+        position: relative;
+        a{
+            @include span(1 of 3);
+            @include first;
+            text-indent: -999999px;
+            background:  white url('../images/facebook-icon.png') no-repeat;
+            background-size: contain;
+            content: " ";
+            height: 78px;
+            position: absolute;
+            display:block;
+        }
+        .cartouche-figcaption{
+            @include span(2 of 3);
+            @include last;
+            color: $white-alpha;
+            background-color : color(black);
+            text-transform: uppercase;
+            padding: gutter(4);
+            height:  78px;
+            font-size: 0.781rem; /* Approximation causée par une substitution de police */
+            font-weight: 300;
+        }
+    }
 }
 .menu-acte{
     @include span(2 of 3);
     @include last;
-    padding: gutter(3);
+    padding: gutter(3) gutter(3) gutter(4) gutter(3);
     padding-left: 0;
     &:not(.active){
         display: none;
