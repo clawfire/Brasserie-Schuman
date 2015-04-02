@@ -8,3 +8,6 @@ facebook : https://www.facebook.com/brasserieschuman
 baseurl: "/Brasserie-Schuman/"
 # Build settings
 highlighter: pygments
+# Collection
+collections:
+- menu

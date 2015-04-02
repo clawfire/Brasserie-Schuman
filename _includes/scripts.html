@@ -25,3 +25,18 @@
          }
     }).addTo(map);
 </script>
+<script src="{{ "/bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
+<script>
+    $(function(){
+        $('.menu-navigation nav a').on('click',function(){
+            var futureActive = $(this).attr('href');
+            // Deactivate everything
+            $('.menu-navigation li').removeClass('active');
+            $('.menu-acte').removeClass('active');
+            // Active the clicked link
+            $(this).addClass('active');
+            // Activate the menu-acte
+            $(futureActive).addClass('active');
+        });
+    });
+</script>

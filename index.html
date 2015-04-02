@@ -3,7 +3,67 @@ layout: default
 ---
 <figure class="site-hero"><img src="images/hero.png" height="1278" width="2024" alt=""></figure>
 
-<section class="menu"></section>
+<section class="menu">
+    <aside class="menu-navigation">
+        <nav>
+            <ul>
+               <li class="active"><a href="#week-menu">Menu de la semaine</a></li>
+               <li><a href="#starter-menu">Entrées</a></li>
+               <li><a href="#main-menu">Plats</a></li>
+               <li><a href="#dessert-menu">Desserts</a></li>
+            </ul>
+        </nav>
+        <div class="navigation-cartouche">
+            <a href="{{site.facebok}}" class="facebook" title="join us on Facebook">facebook</a>
+            <div class="cartouche-figcaption">
+                Le chef<br>
+                Morris Clip
+            </div>
+        </div>
+    </aside>
+    <div class="menu-acte active" id="week-menu">
+        {% for plat in site.menu reversed %}
+            {% if plat.categories contains "week" %}
+            <h1>{{plat.title}}</h1>
+            {{plat.content | markdownify}}
+            {% break %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="menu-acte" id="starter-menu">
+        <h1>Les entrées</h1>
+        <dl>
+            {% for plat in site.menu %}
+                {% if plat.categories contains "starter" %}
+            <dt>{{plat.title}}<span class="menu-price">{{plat.price}}</dt>
+            <dd>{{plat.output}}</dd>
+                {% endif %}
+            {% endfor %}
+        </dl>
+    </div>
+    <div class="menu-acte" id="main-menu">
+        <h1>Les plats</h1>
+        <dl>
+            {% for plat in site.menu %}
+                {% if plat.categories contains "main" %}
+            <dt>{{plat.title}}<span class="menu-price">{{plat.price}}</dt>
+            <dd>{{plat.output}}</dd>
+                {% endif %}
+            {% endfor %}
+        </dl>
+    </div>
+    <div class="menu-acte" id="dessert-menu">
+        <h1>Les desserts</h1>
+        <dl>
+            {% for plat in site.menu %}
+                {% if plat.categories contains "dessert" %}
+            <dt>{{plat.title}}<span class="menu-price">{{plat.price}}</dt>
+            <dd>{{plat.output}}</dd>
+                {% endif %}
+            {% endfor %}
+        </dl>
+    </div>
+</section>
 
 <section class="site-newsletter">
     <form action="" class="newsletter-form">
