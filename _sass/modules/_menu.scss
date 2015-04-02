@@ -1,3 +1,6 @@
+.menu{
+    @include break;
+}
 .menu-navigation{
     font-family: $body-font;
     color: white;
@@ -45,5 +48,14 @@
         color: color(black);
         @include type-scale(h2);
         margin-bottom: 20px;
+    }
+    dt{
+        color: color(black);
+    }
+    dd{
+        color: color(emperor);
+    }
+    .menu-price{
+        float: right;
     }
 }

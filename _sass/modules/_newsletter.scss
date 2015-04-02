@@ -1,4 +1,5 @@
 .site-newsletter{
+    @include break;
     background : {
         color: color(black);
         image : url('../images/newsletter-bg.png');
