@@ -5,7 +5,6 @@
     font-family: $body-font;
     color: white;
     @include span(1 of 3);
-    height: 100%;
     nav{
         background: {
             color : color(black);
@@ -38,8 +37,10 @@
     }
 }
 .menu-acte{
-    padding-top: gutter(3);
-    padding-bottom: gutter(3);
+    @include span(2 of 3);
+    @include last;
+    padding: gutter(3);
+    padding-left: 0;
     &:not(.active){
         display: none;
     }
@@ -51,9 +52,11 @@
     }
     dt{
         color: color(black);
+        font-weight: bold;
     }
     dd{
         color: color(emperor);
+        margin: 0;
     }
     .menu-price{
         float: right;
