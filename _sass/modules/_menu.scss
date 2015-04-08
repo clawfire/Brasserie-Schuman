@@ -4,6 +4,7 @@
 }
 .menu-navigation{
     font-family: $body-font;
+    font-weight: 300;
     color: white;
     @include span(1 of 3);
     @include first();
@@ -11,18 +12,15 @@
         @include break;
         background: {
             color : color(black);
-            image : url("../images/chef.png");
-            repeat : no-repeat;
-            position: right 200px;
-            size: 75%;
         }
         float: right;
         @include prefix(1 of 3);
         padding:{
             top: 50px;
-            bottom: 250px;
+            /*bottom: 250px;*/
         }
         width: 100%;
+        height: 660px;
         ul {
             @extend %lsn;
             li{
@@ -38,32 +36,6 @@
             }
         }
     }
-    .navigation-cartouche{
-        @include break;
-        position: relative;
-        a{
-            @include span(1 of 3);
-            @include first;
-            text-indent: -999999px;
-            background:  white url('../images/facebook-icon.png') no-repeat;
-            background-size: contain;
-            content: " ";
-            height: 78px;
-            position: absolute;
-            display:block;
-        }
-        .cartouche-figcaption{
-            @include span(2 of 3);
-            @include last;
-            color: $white-alpha;
-            background-color : color(black);
-            text-transform: uppercase;
-            padding: gutter(4);
-            height:  78px;
-            font-size: 0.781rem; /* Approximation causée par une substitution de police */
-            font-weight: 300;
-        }
-    }
 }
 .menu-acte{
     @include span(2 of 3);
@@ -75,6 +47,7 @@
     }
     h1{
         font-family: $body-font;
+        font-weight: 300;
         color: color(black);
         @include type-scale(h2);
         margin-bottom: 20px;
