@@ -1,0 +1,13 @@
+.site-gallery{
+  @extend %cf;
+  background-color: color(dune);
+  padding: gutter(4);
+  li{
+    @extend %lsn;
+    @include span(1 of 3 after);
+    margin-bottom: gutter(4);
+    &:nth-of-type(3n){
+      @include last;
+    }
+  }
+}
