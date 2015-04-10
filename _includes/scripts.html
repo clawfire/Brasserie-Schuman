@@ -2,7 +2,7 @@
 <script>
     L.mapbox.accessToken = 'pk.eyJ1IjoidGhpYmF1bHRtaWxhbiIsImEiOiJPTk5Sc1A0In0.cns6bkFRjcQfIfigb0uztg';
     var map = L.mapbox.map('map', 'examples.map-20v6611k')
-                      .setView([49.617642, 6.126142], 16);
+    .setView([49.617642, 6.126142], 16);
 
     L.mapbox.featureLayer({
         // this feature is in the GeoJSON format: see geojson.org
@@ -22,12 +22,16 @@
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
             'marker-symbol': 'restaurant'
-         }
+        }
     }).addTo(map);
 </script>
 <script src="{{ "/bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "bower_components/magnific-popup/dist/jquery.magnific-popup.min.js" | prepend: site.baseurl }}"></script>
 <script>
     $(function(){
+        /**
+        * Navigation & Menu
+        */
         $('.menu-navigation nav a').on('click',function(){
             var futureActive = $(this).attr('href');
             // Deactivate everything
@@ -37,6 +41,17 @@
             $(this).addClass('active');
             // Activate the menu-acte
             $(futureActive).addClass('active');
+        });
+        /**
+        * Magnific Popup
+        */
+        $('.site-gallery').magnificPopup({
+          type:'image',
+          delegate : 'a',
+          gallery: {
+            // options for gallery
+            enabled: true
+          },
         });
     });
 </script>
