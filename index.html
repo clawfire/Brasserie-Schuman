@@ -80,15 +80,18 @@ layout: default
 
 <section class="site-news">
     <ul>
-    {% for post in site.posts %}
+    {% for post in site.posts reversed %}
       <li>
         <article>
             <figure><img src="{{ post.image | prepend: "assets/" | prepend: site.baseurl }}" alt=""></figure>
-            <header>
-                <date>{{ post.date | date: "%b %-d, %Y" }}</date>
-                <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
-            </header>
-            <p>{{ post.excerpt }}</p>
+            <div class="news-content">
+              <header>
+                  <date>{{ post.date | date: "%d/%m" }}</date>
+                  <time>A partir de {{post.date | date:"%Hh%M"}}</time>
+                  <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+              </header>
+              {{ post.excerpt }}
+            </div>
         </article>
       </li>
     {% endfor %}
