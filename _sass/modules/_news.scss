@@ -1,0 +1,44 @@
+.site-news{
+  @include container(center);
+
+  ul,li{
+    @extend %lsn;
+  }
+
+  article{
+    margin: 0 span(2 of 12);
+    color: white;
+
+    figure{
+      @include span(6 of 12);
+    }
+    
+    .news-content{
+      @include span(5 of 12);
+      background: color(dune);
+      padding: 20px;
+      margin-top: 3em;
+      margin-left : - span(3 of 12);
+    
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
+      h1{
+        text-transform: uppercase;
+        @include type-scale(h2);
+        margin-top: 1em;
+      }
+      date{
+        color: color(teak);
+        @include type-scale(h1);
+        font-weight: bold;
+        display:block;
+      }
+    }
+
+  }
+}
+
+
+
