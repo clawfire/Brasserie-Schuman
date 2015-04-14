@@ -83,7 +83,7 @@ layout: default
     {% for post in site.posts %}
       <li>
         <article>
-            <figure><img src="" alt=""></figure>
+            <figure><img src="{{ post.image | prepend: "assets/" | prepend: site.baseurl }}" alt=""></figure>
             <header>
                 <date>{{ post.date | date: "%b %-d, %Y" }}</date>
                 <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
