@@ -27,7 +27,7 @@ layout: default
         <h1>Les entrées</h1>
         <dl>
             {% for plat in site.menu %}
-                {% if plat.categories contains "starter" %}
+                {% if plat.categories contains "starter" reversed%}
             <dt>{{plat.title}}<span class="menu-price">{{plat.price}}</dt>
             <dd>{{plat.output}}</dd>
                 {% endif %}
@@ -38,7 +38,7 @@ layout: default
         <h1>Les plats</h1>
         <dl>
             {% for plat in site.menu %}
-                {% if plat.categories contains "main" %}
+                {% if plat.categories contains "main" reversed %}
             <dt>{{plat.title}}<span class="menu-price">{{plat.price}}</dt>
             <dd>{{plat.output}}</dd>
                 {% endif %}
@@ -49,7 +49,7 @@ layout: default
         <h1>Les desserts</h1>
         <dl>
             {% for plat in site.menu %}
-                {% if plat.categories contains "dessert" %}
+                {% if plat.categories contains "dessert" reversed%}
             <dt>{{plat.title}}<span class="menu-price">{{plat.price}}</dt>
             <dd>{{plat.output}}</dd>
                 {% endif %}
