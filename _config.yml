@@ -5,7 +5,7 @@ adress: "1, Rond-Point Schuman  L-2525 Luxembourg  T +352 24 61 85 44"
 ouverture : "Ouvert du Lundi au Vendredi, Les Samedis soir, Les Dimanches (jours de spectacles)"
 url: "http://www.brasserieschuman.pro/" # the base hostname & protocol for your site
 facebook : https://www.facebook.com/brasserieschuman
-baseurl: "/Brasserie-Schuman/"
+baseurl: "/"
 # Build settings
 highlighter: pygments
 # Collection
