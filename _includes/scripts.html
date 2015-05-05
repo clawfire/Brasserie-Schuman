@@ -38,7 +38,7 @@
             $('.menu-navigation li').removeClass('active');
             $('.menu-acte').removeClass('active');
             // Active the clicked link
-            $(this).addClass('active');
+            $(this).parent().addClass('active');
             // Activate the menu-acte
             $(futureActive).addClass('active');
         });
