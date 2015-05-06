@@ -8,14 +8,14 @@ categories: week
 <br>
 Uniquement le service de midi  
 <br>
-Croquette de crevettes grises, tartare de tomate origan
-ou
+Croquette de crevettes grises, tartare de tomate origan  
+ou  
 Gaspacho de poivrons grillés, tagliolini de calamar, coriandre, citron vert
 <hr>
-Pavé de saumon grillé sauce mousseline, écrasé de pomme de terre à l’huile de ciboulette
-ou
+Pavé de saumon grillé sauce mousseline, écrasé de pomme de terre à l’huile de ciboulette  
+ou  
 Plat du jour
 <hr>
-Salade de fruits frais, granité à la menthe 
-ou
+Salade de fruits frais, granité à la menthe  
+ou  
 Assiette de fromages affinés, mesclun et compote de fruits secs
