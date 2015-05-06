@@ -48,7 +48,7 @@
     h1{
         font-family: $body-font;
         font-weight: 300;
-        color: color(black);
+        color: color(teak);
         @include type-scale(h2);
         margin-bottom: 20px;
     }

@@ -3,7 +3,7 @@ layout: default
 ---
 <figure class="site-hero"><img src="images/hero.png" height="1278" width="2024" alt=""></figure>
 
-<section class="menu">
+<section class="menu" id="menu">
     <aside class="menu-navigation">
         <nav>
             <ul>
@@ -66,7 +66,7 @@ layout: default
     </form>
 </section>
 
-<section class="site-gallery">
+<section class="site-gallery" id="gallery">
     <ul>
         <li><a href="images/gallery/BS-galerie1.jpg" title="Vue de la terasse de la Brasserie"><img src="images/gallery/BS-galerie1.jpg" alt=""></a></li>
         <li><a href="images/gallery/BS-galerie2.jpg" title="Découvrez notre salle"><img src="images/gallery/BS-galerie2.jpg" alt=""></a></li>
@@ -78,7 +78,7 @@ layout: default
 
 </section>
 
-<section class="site-news">
+<section class="site-news" id="news">
     <ul>
     {% for post in site.posts reversed %}
       <li>
