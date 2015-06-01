@@ -32,7 +32,7 @@
         /**
         * Navigation & Menu
         */
-        $('.menu-navigation nav a').on('click',function(){
+        $('.menu-navigation ul').not('.menu--english').find('li a').on('click',function(){
             var futureActive = $(this).attr('href');
             // Deactivate everything
             $('.menu-navigation li').removeClass('active');
@@ -56,6 +56,16 @@
             // options for image content type
             titleSrc: 'title'
             }
+        });
+        $('.menu--english').magnificPopup({
+          type:'image',
+          delegate : 'a',
+          gallery: {
+            enabled: true
+          },
+          image: {
+            titleSrc: 'title'
+          }
         });
     });
 </script>
